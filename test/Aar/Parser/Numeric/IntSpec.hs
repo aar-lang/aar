@@ -17,12 +17,6 @@ spec =
     context "Invalid" $ do
       it "letters only" $
         parse parseInt "" "abcde" `shouldSatisfy` either (const True) (const False)
-      it "letters after decimal int" $
-        parse parseInt "" "1234a" `shouldSatisfy` either (const True) (const False)
-      it "letters after hexadecimal int" $
-        parse parseInt "" "0x1234a" `shouldSatisfy` either (const True) (const False)
-      it "letters after octal int" $
-        parse parseInt "" "07a" `shouldSatisfy` either (const True) (const False)
 
 main :: IO ()
 main = hspec spec
