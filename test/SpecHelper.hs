@@ -1,18 +1,14 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
-module SpecHelper ( module Test.Hspec
-                  , module Text.ParserCombinators.Parsec
-                  , module Text.ParserCombinators.Parsec.Error
+module SpecHelper ( module X
                   ) where
 
-import Test.Hspec
+import Test.Hspec as X
 
-import Text.ParserCombinators.Parsec
-import Text.ParserCombinators.Parsec.Error ( ParseError
-                                           , Message
-                                           , errorMessages
-                                           , messageEq
-                                           )
+import Text.ParserCombinators.Parsec as X
+import Text.ParserCombinators.Parsec.Error as X ( ParseError
+                                                , errorMessages
+                                                )
 
 instance Eq ParseError where
     a == b = errorMessages a == errorMessages b

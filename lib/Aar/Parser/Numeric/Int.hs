@@ -17,9 +17,7 @@ parseHexNum = do
   return ('0':'x':hexStr)
 
 parseDecNum :: Parser String
-parseDecNum = do
-  decStr <- many1 digit
-  return decStr
+parseDecNum = many1 digit
 
 parseInt :: Parser Integer
 parseInt = do
