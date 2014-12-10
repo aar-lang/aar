@@ -1,8 +1,8 @@
 module Aar.Parser.Numeric.IntSpec where
 
-import SpecHelper
+import           SpecHelper
 
-import Aar.Parser.Numeric.Int
+import           Aar.Parser.Numeric.Int
 
 spec :: Spec
 spec =

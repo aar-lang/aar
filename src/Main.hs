@@ -2,11 +2,11 @@
 
 module Main where
 
-import Control.Monad
-import System.Environment
-import Text.ParserCombinators.Parsec
+import           Control.Monad
+import           System.Environment
+import           Text.ParserCombinators.Parsec
 
-import Aar.Parser.Numeric.Int
+import           Aar.Parser.Numeric.Int
 
 main :: IO ()
 main = do

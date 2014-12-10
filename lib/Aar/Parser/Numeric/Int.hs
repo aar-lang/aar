@@ -1,8 +1,8 @@
 module Aar.Parser.Numeric.Int where
 
-import Control.Monad
-import Text.ParserCombinators.Parsec
-import Text.ParserCombinators.Parsec.Char
+import           Control.Monad
+import           Text.ParserCombinators.Parsec
+import           Text.ParserCombinators.Parsec.Char
 
 parseOctNum :: Parser String
 parseOctNum = do
