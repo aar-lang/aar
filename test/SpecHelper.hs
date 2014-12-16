@@ -10,6 +10,7 @@ import           Text.ParserCombinators.Parsec       as X
 import           Text.ParserCombinators.Parsec.Error as X (ParseError,
                                                            errorMessages)
 
+import           Aar.Lexer.Token
 import           Aar.Parser.Numeric.Int
 
 instance Eq ParseError where

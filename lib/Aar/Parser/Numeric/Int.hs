@@ -5,8 +5,7 @@ import           Text.Parsec.Prim                   (ParsecT)
 import           Text.ParserCombinators.Parsec
 import           Text.ParserCombinators.Parsec.Char
 
-data Token = TokInt !SourcePos !Integer
-           deriving (Show, Eq)
+import           Aar.Lexer.Token
 
 sourcePos :: Monad m => ParsecT s u m SourcePos
 sourcePos = statePos `liftM` getParserState
