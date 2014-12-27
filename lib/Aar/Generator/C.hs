@@ -5,6 +5,18 @@ import           System.FilePath
 
 import           Aar.Lexer.Token
 
+type Imports   = [String]
+type Functions = [Function]
+type Params    = [(Type, Name)]
+type Type      = String
+type Name      = String
+type Code      = Lines
+type Lines     = [String]
+
+data Function  = Function Type Name Params Code
+
+data GState = GState Imports Functions
+
 generate :: [Token] -> FilePath -> IO (Either String ())
 generate ts path = undefined
 
