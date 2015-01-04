@@ -21,8 +21,11 @@ getRecursiveContents topPath = do
       else return [path]
   return (concat paths)
 
+isHaskellSource :: FilePath -> Bool
+isHaskellSource = (".hs" ==) . takeExtension
+
 main :: IO ()
 main = do
   files <- getRecursiveContents "./lib"
-  hsfls <- return $ filter (\f -> ".hs" == (takeExtension f)) files
+  let hsfls = filter isHaskellSource files
   doctest ("-ilib":hsfls)
