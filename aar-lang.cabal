@@ -64,6 +64,7 @@ library
   exposed-modules: Aar.Parser.Numeric.Int
                    Aar.Lexer.Token
                    Aar.AST
+                   Aar.Generate
                    Aar.Generator
                    Aar.Generator.C
   build-depends: base     >=4.7 && <4.8
