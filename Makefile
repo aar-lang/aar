@@ -7,6 +7,9 @@ test: sandbox install_sandbox configure_test build run_test
 stylish:
 	find -type d \( -path ./dist -o -path ./.cabal-sandbox \) -prune -o -name "*.hs" -print | xargs -n1 -P2 stylish-haskell --inplace
 
+lint:
+	hlint ./src ./lib ./test --report
+
 clean: clean_sandbox clean_dist
 
 configure:
