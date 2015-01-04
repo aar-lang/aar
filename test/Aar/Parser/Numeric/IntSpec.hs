@@ -14,7 +14,7 @@ spec =
         valueOf (parse parseInt "" "0xFF") `shouldBe` 255
       it "parses an octal int" $
         valueOf (parse parseInt "" "07") `shouldBe` 7
-    context "Invalid" $ do
+    context "Invalid" $ 
       it "letters only" $
         parse parseInt "" "abcde" `shouldSatisfy` either (const True) (const False)
 
