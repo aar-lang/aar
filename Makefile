@@ -10,6 +10,9 @@ stylish:
 lint:
 	hlint ./src ./lib ./test --report
 
+doc:
+	$(CABAL) haddock
+
 clean: clean_sandbox clean_dist
 
 configure:
