@@ -1,9 +1,8 @@
 module Aar.Parser.Numeric.Int where
 
 import           Control.Monad
-import           Text.Parsec.Prim                   (ParsecT)
+import           Text.Parsec.Prim              (ParsecT)
 import           Text.ParserCombinators.Parsec
-import           Text.ParserCombinators.Parsec.Char
 
 import           Aar.Lexer.Token
 
