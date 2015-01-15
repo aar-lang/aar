@@ -2,7 +2,7 @@ CABAL    = cabal
 
 all: sandbox install_sandbox configure build
 
-test: sandbox install_sandbox configure_test build run_test
+test: sandbox install_sandbox_test configure_test build run_test
 
 stylish:
 	find -type d \( -path ./dist -o -path ./.cabal-sandbox \) -prune -o -name "*.hs" -print | xargs -n1 -P2 stylish-haskell --inplace
@@ -42,3 +42,6 @@ cabal.sandbox.config: | .cabal-sandbox
 
 install_sandbox:
 	$(CABAL) install --only-dependencies
+
+install_sandbox_test:
+	$(CABAL) install --only-dependencies --enable-tests
